@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Catch The Insect</title>
+</head>
+<body>
+    <div class="screen start">
+      <h1>catch the insect</h1>
+      <button class="btn" id="start-btn">play game</button>
+    </div>
+
+    <div class="select-menu screen">
+      <h1>What is your "favorite" insect?</h1>
+      <div class="insect-container">
+        <div class="insect" id="fly">
+          <h3>fly</h3>
+          <img src="fly.png" alt="fly-img">
+        </div>
+        <div class="insect" id="roach">
+          <h3>roach</h3>
+          <img src="roach.png" alt="roach-img">
+        </div>
+        <div class="insect" id="mosquito">
+          <h3>mosquito</h3>
+          <img src="mosquito.png" alt="mosquito-img">
+        </div>
+        <div class="insect" id="spider">
+          <h3>spider</h3>
+          <img src="spider.png" alt="spider-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="screen game-container">
+      <div class="timer">Time: 00:00</div>
+      <div class="score">Score: <span id="score">0</span></div>
+      <h5 id="message" class="message">
+        Annoyed yet?
+      </h5>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #516dff;
+    color: #fff;
+    font-family: 'Press Start 2P', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    transition: margin 0.5s ease-out;
+}
+
+.screen.up {
+    margin-top: -100vh;
+}
+
+.start h1 {
+    text-transform: capitalize;
+}
+
+.start .btn {
+    font-family: inherit;
+    font-size: 0.8rem;
+    background-color: #fff;
+    color: #516dff;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.start .btn:hover {
+    opacity: 0.9;
+}
+
+.select-menu h1 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.select-menu img {
+    width: 100px;
+    height: 100px;
+}
+
+.select-menu .insect {
+    border: solid;
+    width: 175px;
+    height: 175px;
+    margin: 5px 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.select-menu .insect:hover {
+    background-color: #fff;
+    color: #516dff;
+}
+
+.select-menu .insect h3 {
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.insect-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.timer {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    font-size: 1.2rem;
+}
+
+.score {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+
+.game-container {
+    display: none;
+}
+
+.game-container.active {
+    display: block;
+}
+
+.message {
+    line-height: 1.7;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 20px;
+    z-index: 100;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    transition: transform 0.4s ease-in;
+}
+
+.message.visible {
+    transform: translate(-50%, 150%);
+    opacity: 1;
+}
+
+.game-insect {
+    position: absolute;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease-in-out;
+}
